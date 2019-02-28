@@ -1,4 +1,4 @@
-package com.icypt.learn.microservicespringcloudcontext;
+package com.icypt.learn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

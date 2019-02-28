@@ -1,4 +1,4 @@
-package com.icypt.learn.microservicespringcloudcontext;
+package com.icypt.learn;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
