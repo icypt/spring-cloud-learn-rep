@@ -1,0 +1,26 @@
+server:
+  port: 7900
+spring:
+  jpa:
+    #是否显示sql
+    show-sql: true
+    #是否在启动时初始化数据库结构：schema, generate-ddl控制更加精细，与厂商无关，
+    #如果hibernate.ddl-auto属性打开，generate-ddl关闭也会执行schema脚本，其优先级更低，粒度更细
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    #控制hibernate查询时参数是否打印日志
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    #控制返回结果是否打印日志
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+
+
