@@ -12,6 +12,7 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 ribbon:
   eureka:
+    #如果没有依赖eureka客户端则不需要使用此配置
     enabled: false
 microservice-provider-user:
   ribbon:
