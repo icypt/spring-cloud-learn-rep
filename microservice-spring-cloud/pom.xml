@@ -46,6 +46,8 @@
 		<module>microservice-spring-cloud-context</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-consumer-blog</module>
+		<module>microservice-consumer-blog-ribbon</module>
+		<module>microservice-consumer-blog-ribbon-customizing</module>
 		<module>microservice-discovery-eureka</module>
 	</modules>
 

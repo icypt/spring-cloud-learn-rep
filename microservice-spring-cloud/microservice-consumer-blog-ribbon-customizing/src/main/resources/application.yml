@@ -1,0 +1,16 @@
+server:
+  port: 6900
+spring:
+  application:
+    name: microservice-consumer-blog-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+microservice-provider-user:
+  ribbon:
+    #优先级最高，java代码配置第二，默认配置第三，见官方文档
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

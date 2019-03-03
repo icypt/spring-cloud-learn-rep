@@ -1,10 +1,8 @@
-user:
-  userServicePath: http://localhost:7900/
 server:
-  port: 8900
+  port: 6900
 spring:
   application:
-    name: microservice-consumer-blog
+    name: microservice-consumer-blog-ribbon
 eureka:
   client:
     service-url:

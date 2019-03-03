@@ -1,5 +1,5 @@
 server:
-  port: 7900
+  port: 7903
 spring:
   jpa:
     #是否显示sql
@@ -13,6 +13,9 @@ spring:
     platform: h2
     schema: classpath:schema.sql
     data: classpath:data.sql
+  application:
+    #引用名称建议小写
+    name: microservice-provider-user1
 logging:
   level:
     root: INFO
@@ -21,6 +24,25 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     #控制返回结果是否打印日志
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.icypt.learn: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+         # 暴露metrics端点，如需暴露多个，用,分隔；如需暴露所有端点，用'*'
+         #http://localhost:7900/actuator/metrics
+         #http://localhost:7900/actuator/metrics/jvm.memory.max
+        include: '*'
 
 
 
