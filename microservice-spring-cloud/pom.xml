@@ -48,6 +48,7 @@
 		<module>microservice-consumer-blog</module>
 		<module>microservice-consumer-blog-ribbon</module>
 		<module>microservice-consumer-blog-ribbon-customizing</module>
+		<module>microservice-consumer-blog-ribbon-without-eureka</module>
 		<module>microservice-discovery-eureka</module>
 	</modules>
 

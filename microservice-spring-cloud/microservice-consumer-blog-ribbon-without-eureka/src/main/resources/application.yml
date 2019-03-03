@@ -2,7 +2,7 @@ server:
   port: 6900
 spring:
   application:
-    name: microservice-consumer-blog-ribbon-customizing
+    name: microservice-consumer-blog-ribbon-without-eureka
 eureka:
   client:
     service-url:
@@ -10,7 +10,9 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+ribbon:
+  eureka:
+    enabled: false
 microservice-provider-user:
   ribbon:
-    #优先级最高，java代码配置第二，默认配置第三，见官方文档
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    listOfServers: localhost:7900

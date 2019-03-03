@@ -1,5 +1,5 @@
 server:
-  port: 7903
+  port: 7901
 spring:
   jpa:
     #是否显示sql
@@ -15,7 +15,7 @@ spring:
     data: classpath:data.sql
   application:
     #引用名称建议小写
-    name: microservice-provider-user1
+    name: microservice-provider-user
 logging:
   level:
     root: INFO
