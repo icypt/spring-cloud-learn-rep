@@ -10,7 +10,9 @@ spring:
       password: password123
 eureka:
   client:
+    #不用eureka进行注册
     register-with-eureka: false
+    #客户端不拉取注册信息
     fetch-registry: false
     service-url:
       defaultZone: http://user:password123@localhost:8761/eureka/
