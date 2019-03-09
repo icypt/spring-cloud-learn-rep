@@ -32,6 +32,13 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    #续约心跳周期默认30秒，生产环境最好使用默认值
+    #lease-renewal-interval-in-seconds: 5
+    metadata-map:
+      #eureka 本身的元数据，修改之后有可能会影响其行为
+      zone: ABC
+      #自定义元数据，不会影响其行为
+      icypt: gjchen
 management:
   endpoint:
     health:
@@ -43,6 +50,7 @@ management:
          #http://localhost:7900/actuator/metrics
          #http://localhost:7900/actuator/metrics/jvm.memory.max
         include: '*'
+
 
 
 
