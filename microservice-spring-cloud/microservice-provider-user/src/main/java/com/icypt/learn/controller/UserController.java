@@ -7,10 +7,7 @@ import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -54,5 +51,15 @@ public class UserController {
     public Object getMcsInstanceInfo() {
         List<ServiceInstance> instances = discoveryClient.getInstances("microservice-provider-user");
         return instances;
+    }
+
+    @GetMapping("/testGetUser")
+    public User testGetUser(@RequestBody User user) {
+        return user;
+    }
+
+    @PostMapping("/testPostUser")
+    public User testPostUser(@RequestBody User user) {
+        return user;
     }
 }

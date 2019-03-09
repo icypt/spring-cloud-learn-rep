@@ -1,7 +1,7 @@
 package com.icypt.learn;
 
-import com.icypt.learn.config.ExcludeFromComponentScan;
-import com.icypt.learn.config.RibbonConfig;
+import config.ExcludeFromComponentScan;
+import config.RibbonConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;

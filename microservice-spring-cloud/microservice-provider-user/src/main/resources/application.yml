@@ -1,5 +1,5 @@
 server:
-  port: 7901
+  port: 7900
 spring:
   jpa:
     #是否显示sql

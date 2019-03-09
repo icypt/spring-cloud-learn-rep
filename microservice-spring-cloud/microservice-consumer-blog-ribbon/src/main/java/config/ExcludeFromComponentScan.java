@@ -1,4 +1,4 @@
-package com.icypt.learn.config;
+package config;
 
 /**
  * platform：www.javaroads.com
