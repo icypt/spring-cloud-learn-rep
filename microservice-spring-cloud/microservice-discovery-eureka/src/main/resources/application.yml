@@ -9,6 +9,9 @@ spring:
       name: user
       password: password123
 eureka:
+  #没有提示
+  environment: product
+  datacenter: cloud
   client:
     #不用eureka进行注册
     register-with-eureka: false
@@ -16,6 +19,10 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://user:password123@localhost:8761/eureka/
+  server:
+    #关闭eureka自我保护模式，生产环境不能关闭
+    #enableSelfPreservation: false
+    #eviction-interval-timer-in-ms: 4000
 
 
 

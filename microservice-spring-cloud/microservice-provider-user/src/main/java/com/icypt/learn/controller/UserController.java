@@ -9,6 +9,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,5 +62,19 @@ public class UserController {
     @PostMapping("/testPostUser")
     public User testPostUser(@RequestBody User user) {
         return user;
+    }
+
+    @GetMapping("testListUser")
+    public Object testRibbonList() {
+        List<User> userList = new ArrayList<>();
+        for(int i=0; i < 3; i++) {
+            User user = new User();
+            user.setId((long)i);
+            user.setAge(10 + i);
+            user.setJob("Java" + i);
+            user.setName("icypt" + i);
+            userList.add(user);
+        }
+        return userList;
     }
 }
