@@ -57,6 +57,7 @@
 		<module>microservice-consumer-blog-ribbon-with-hystrix</module>
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-hystrix-turbine</module>
 		<module>microservice-discovery-eureka-ha</module>
 	</modules>
 
