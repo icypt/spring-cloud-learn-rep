@@ -55,9 +55,11 @@
 		<module>microservice-consumer-blog-feign-customizing</module>
 		<module>microservice-consumer-blog-feign-customizing-without-hystrix</module>
 		<module>microservice-consumer-blog-ribbon-with-hystrix</module>
+		<module>microservice-consumer-blog-ribbon-with-hystrix-extends</module>
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-hystrix-dashboard</module>
 		<module>microservice-hystrix-turbine</module>
+		<module>microservice-hystrix-turbine-extends</module>
 		<module>microservice-discovery-eureka-ha</module>
 	</modules>
 

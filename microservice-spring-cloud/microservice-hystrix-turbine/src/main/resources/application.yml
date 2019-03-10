@@ -1,0 +1,23 @@
+#turbine监控多个集群
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: microservice-consumer-blog-ribbon-with-hystrix,microservice-consumer-blog-feign-with-hystrix
+  cluster-name-expression: "'default'"
+
+
+
+
+

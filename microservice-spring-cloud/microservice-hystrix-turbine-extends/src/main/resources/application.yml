@@ -1,0 +1,24 @@
+#携带server.servlet.context-path的时候turbine配置
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-hystrix-turbine-extends
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+turbine:
+  aggregator:
+    cluster-config: MICROSERVICE-CONSUMER-BLOG-RIBBON-WITH-HYSTRIX-EXTENDS
+  app-config: microservice-consumer-blog-ribbon-with-hystrix-extends
+#如果你所监控的集群配置了上下文则必须按照以下配置，否则turbine获取不到数据
+turbine.instanceUrlSuffix.MICROSERVICE-CONSUMER-BLOG-RIBBON-WITH-HYSTRIX-EXTENDS: ribbon/actuator/hystrix.stream
+
+
+
+
+
