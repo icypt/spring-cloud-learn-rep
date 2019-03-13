@@ -1,0 +1,31 @@
+server:
+  port: 4900
+spring:
+  application:
+    #引用名称建议小写
+    name: microservice-file-upload
+  servlet:
+    multipart:
+      max-file-size: 2000MB
+      max-request-size: 3000MB
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+         # 暴露metrics端点，如需暴露多个，用,分隔；如需暴露所有端点，用'*'
+         #http://localhost:7900/actuator/metrics
+         #http://localhost:7900/actuator/metrics/jvm.memory.max
+        include: '*'
+
+
+
