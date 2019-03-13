@@ -1,0 +1,22 @@
+server:
+  port: 5900
+spring:
+  application:
+    #应用名称
+    name: microservice-getway-zuul
+  security:
+    user:
+      name: user
+      password: password123
+eureka:
+  instance:
+      prefer-ip-address: true
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+  client:
+      service-url:
+        defaultZone: http://user:password123@localhost:8761/eureka/
+zuul:
+  routes:
+    microservice-provider-user: /userServer/**
+  ignored-services: microservice-consumer-blog-ribbon-with-hystrix
+
