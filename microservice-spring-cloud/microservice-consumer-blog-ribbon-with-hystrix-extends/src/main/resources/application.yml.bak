@@ -1,4 +1,4 @@
-#使用管理端口
+#使用上下文，对应turbine配置在microservice-hystrix-extends *.yml.bak
 server:
   port: 6900
   servlet:
@@ -14,8 +14,6 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     home-page-url-path: /ribbon
-    metadata-map:
-      management.port: 8081
 management:
   endpoint:
     health:
@@ -27,5 +25,3 @@ management:
          #http://localhost:7900/actuator/metrics
          #http://localhost:7900/actuator/metrics/jvm.memory.max
         include: '*'
-  server:
-    port: 8081

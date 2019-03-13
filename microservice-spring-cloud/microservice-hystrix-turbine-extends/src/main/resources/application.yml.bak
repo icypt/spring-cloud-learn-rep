@@ -15,6 +15,8 @@ turbine:
   aggregator:
     cluster-config: MICROSERVICE-CONSUMER-BLOG-RIBBON-WITH-HYSTRIX-EXTENDS
   app-config: microservice-consumer-blog-ribbon-with-hystrix-extends
+#如果你所监控的集群配置了上下文则必须按照以下配置，否则turbine获取不到数据
+turbine.instanceUrlSuffix.MICROSERVICE-CONSUMER-BLOG-RIBBON-WITH-HYSTRIX-EXTENDS: ribbon/actuator/hystrix.stream
 
 
 
