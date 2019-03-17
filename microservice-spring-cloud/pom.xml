@@ -62,8 +62,10 @@
 		<module>microservice-hystrix-turbine-extends</module>
 		<module>microservice-discovery-eureka-ha</module>
 		<module>microservice-gateway-zuul</module>
+		<module>microservice-gateway-zuul-fallback</module>
 		<module>microservice-gateway-zuul-reg-exp</module>
 		<module>microservice-file-upload</module>
+		<module>microservice-sidecar</module>
 	</modules>
 
 	<build>
