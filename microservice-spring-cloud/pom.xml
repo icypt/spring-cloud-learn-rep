@@ -67,6 +67,9 @@
 		<module>microservice-gateway-zuul-reg-exp</module>
 		<module>microservice-file-upload</module>
 		<module>microservice-sidecar</module>
+		<module>microservice-config-server</module>
+		<module>microservice-config-client</module>
+		
 	</modules>
 
 	<build>
