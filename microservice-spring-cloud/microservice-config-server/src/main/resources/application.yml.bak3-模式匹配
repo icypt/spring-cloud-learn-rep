@@ -1,17 +1,11 @@
-
 spring:
   cloud:
     config:
       server:
         git:
           uri: https://gitee.com/ICYPT/config-repo
-          #启动时是否克隆远程配置仓库到本地
-          cloneOnStart: true
           repos:
             simple: https://gitee.com/ICYPT/simple
             special:
               pattern: special*/dev*,special*/test*
               uri: https://gitee.com/ICYPT/special
-              cloneOnStart: false
-  application:
-    name: microservice-config-server

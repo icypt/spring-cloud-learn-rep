@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #application值的是应用名称，也要求git仓库需以应用名称命名，里面配置文件为应用名称-环境属性
+          uri: https://gitee.com/ICYPT/{application}
