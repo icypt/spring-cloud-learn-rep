@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+         # 暴露metrics端点，如需暴露多个，用,分隔；如需暴露所有端点，用'*'
+         #http://localhost:7900/actuator/metrics
+         #http://localhost:7900/actuator/metrics/jvm.memory.max
+        include: '*'
