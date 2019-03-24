@@ -1,0 +1,7 @@
+#rsa加密配置必须放在bootstrap.yml
+encrypt:
+  key-store:
+    alias: mytestkey
+    location: classpath:/server.jks
+    password: letmein
+    secret: changeme
