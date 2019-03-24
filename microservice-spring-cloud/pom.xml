@@ -68,7 +68,9 @@
 		<module>microservice-file-upload</module>
 		<module>microservice-sidecar</module>
 		<module>microservice-config-server</module>
+		<module>microservice-config-server-auth</module>
 		<module>microservice-config-client</module>
+		<module>microservice-config-client-auth</module>
 		
 	</modules>
 
