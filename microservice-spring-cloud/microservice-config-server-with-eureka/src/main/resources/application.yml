@@ -1,0 +1,19 @@
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/ICYPT/config-repo
+  application:
+    name: microservice-config-server-with-eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+server:
+  port: 8083
+
