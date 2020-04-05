@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.3.RELEASE</version>
+	</parent>
+	<groupId>com.icypt.learn</groupId>
+	<artifactId>spring-cloud-learn-greenwich</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Greenwich.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	<modules>
+		<module>microservice-spring-cloud-context</module>
+		<module>microservice-provider-user</module>
+		<module>microservice-consumer-blog</module>
+		<module>microservice-consumer-blog-ribbon</module>
+		<module>microservice-consumer-blog-ribbon-customizing</module>
+		<module>microservice-consumer-blog-ribbon-without-eureka</module>
+		<module>microservice-consumer-blog-feign</module>
+		<module>microservice-consumer-blog-feign-with-hystrix</module>
+		<module>microservice-consumer-blog-feign-with-hystrix-hystrix-factory</module>
+		<module>microservice-consumer-blog-feign-customizing</module>
+		<module>microservice-consumer-blog-feign-customizing-without-hystrix</module>
+		<module>microservice-consumer-blog-ribbon-with-hystrix</module>
+		<module>microservice-consumer-blog-ribbon-with-hystrix-extends</module>
+		<module>microservice-discovery-eureka</module>
+		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-hystrix-turbine</module>
+		<module>microservice-hystrix-turbine-extends</module>
+		<module>microservice-discovery-eureka-ha</module>
+		<module>microservice-gateway-zuul</module>
+		<module>microservice-gateway-zuul-fallback</module>
+		<module>microservice-gateway-zuul-filter</module>
+		<module>microservice-gateway-zuul-reg-exp</module>
+		<module>microservice-file-upload</module>
+		<module>microservice-sidecar</module>
+		<module>microservice-config-server</module>
+		<module>microservice-config-server-with-eureka</module>
+		<module>microservice-config-server-auth</module>
+		<module>microservice-config-client</module>
+		<module>microservice-config-client-refresh</module>
+		<module>microservice-config-client-refresh-bus</module>
+		<module>microservice-config-client-with-eureka</module>
+		<module>microservice-config-client-auth</module>
+		
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
