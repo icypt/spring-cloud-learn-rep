@@ -1,0 +1,18 @@
+server:
+  #服务端口
+  port: 8761
+spring:
+  application:
+    name: spring-cloud-eureka-server
+eureka:
+  instance:
+    hostname: localhost
+    #prefer-ip-address: true
+  client:
+    #关闭eureka作为客户端的注册行为
+    registerWithEureka: false
+    #关闭eureka作为客户端的注册行为
+    fetchRegistry: false
+    #为客户端提供的注册中心的地址
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

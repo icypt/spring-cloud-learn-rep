@@ -7,13 +7,13 @@
         <artifactId>spring-cloud-learn-hoxton.sr3</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>spring-cloud-eureka-server</artifactId>
+    <artifactId>spring-cloud-eureka-client</artifactId>
 
-    <!--eureka注册中心依赖-->
+    <!--eureka客户端依赖-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
