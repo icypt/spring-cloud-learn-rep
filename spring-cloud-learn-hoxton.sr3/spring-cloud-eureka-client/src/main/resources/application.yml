@@ -6,6 +6,13 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+    #自定义实例ID,/eureka/apps
+    instanceId: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
+    #自定义元数据
+    metadata-map:
+      desc: spring-cloud-eureka-client-learn
+    #心跳间隔时间，默认30秒
+    lease-renewal-interval-in-seconds: 30
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://test:test123@localhost:8761/eureka/

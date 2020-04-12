@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: spring-cloud-eureka-server
+  security:
+    user:
+      name: test
+      password: test123
 eureka:
   instance:
     hostname: localhost
@@ -13,6 +17,9 @@ eureka:
     registerWithEureka: false
     #关闭eureka作为客户端的注册行为
     fetchRegistry: false
+    healthcheck:
+      #启动健康检查，启动后如果应用状态非"up"状态，其他应用将不会发交易到此应用
+      enabled: true
     #为客户端提供的注册中心的地址
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
