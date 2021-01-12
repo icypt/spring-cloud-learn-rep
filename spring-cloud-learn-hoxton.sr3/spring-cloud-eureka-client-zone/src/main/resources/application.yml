@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-eureka-client
+eureka:
+  instance:
+    prefer-ip-address: true
+    #自定义实例ID,/eureka/apps
+    instanceId: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
+    #自定义元数据
+    metadata-map:
+      desc: spring-cloud-eureka-client-learn
+      zone: zone-01
+    #心跳间隔时间，默认30秒
+    lease-renewal-interval-in-seconds: 30
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    region: icypt
+    availability-zones:
+      icypt: zone-01,zone-02
+    prefer-same-zone-eureka: true
+    healthcheck:
+      #启动健康检查，启动后如果应用状态非"up"状态，其他应用将不会发交易到此应用
+      enabled: true
+    #为客户端提供的注册中心的地址
+    serviceUrl:
+      zone-01: http://user:test123@localhost:8761/eureka/
+      zone-02: http://user:test123@localhost:8762/eureka/
+zone.name: zone-01

@@ -1,9 +1,9 @@
 server:
   #服务端口
-  port: 8762
+  port: 8761
 spring:
   application:
-    name: spring-cloud-eureka-server-zone-02
+    name: spring-cloud-eureka-server
   security:
     user:
       name: test
@@ -13,16 +13,13 @@ eureka:
     hostname: localhost
     #prefer-ip-address: true
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    region: icypt
-    availability-zones:
-      icypt: zone-02,zone-01
-    prefer-same-zone-eureka: true
+    #关闭eureka作为客户端的注册行为
+    registerWithEureka: false
+    #关闭eureka作为客户端的注册行为
+    fetchRegistry: false
     healthcheck:
       #启动健康检查，启动后如果应用状态非"up"状态，其他应用将不会发交易到此应用
       enabled: true
     #为客户端提供的注册中心的地址
     serviceUrl:
-      zone-01: http://user:test123@${eureka.instance.hostname}:8761/eureka/
-      zone-02: http://user:test123@${eureka.instance.hostname}:8762/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
