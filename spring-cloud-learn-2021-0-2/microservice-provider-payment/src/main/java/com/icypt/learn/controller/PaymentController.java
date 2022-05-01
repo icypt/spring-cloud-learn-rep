@@ -19,7 +19,7 @@ public class PaymentController {
 
 
     @PostMapping("/create")
-    public ResultVo create(Payment payment) {
+    public ResultVo create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         log.info("=====插入成功=======");
         if(result > 0) {
