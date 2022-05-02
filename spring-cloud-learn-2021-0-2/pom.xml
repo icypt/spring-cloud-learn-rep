@@ -68,6 +68,8 @@
         <module>microservice-eureka-self-protect</module>
         <module>microservice-provider-with-zookeeper</module>
         <module>microservice-consumer-with-zookeeper</module>
+        <module>microservice-consumer-with-consul</module>
+        <module>microservice-provider-with-consul</module>
     </modules>
 
 
