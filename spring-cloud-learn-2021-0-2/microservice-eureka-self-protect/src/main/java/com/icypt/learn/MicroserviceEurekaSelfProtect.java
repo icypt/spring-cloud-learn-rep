@@ -2,12 +2,13 @@ package com.icypt.learn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class MicroserviceConsumerOrder {
+@EnableEurekaServer
+public class MicroserviceEurekaSelfProtect {
+
     public static void main(String[] args) {
-        SpringApplication.run(MicroserviceConsumerOrder.class, args);
+        SpringApplication.run(MicroserviceEurekaSelfProtect.class,args);
     }
 }

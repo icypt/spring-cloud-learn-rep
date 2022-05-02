@@ -61,6 +61,13 @@
         <module>microservice-provider-payment</module>
         <module>microservice-consumer-order</module>
         <module>microservice-api-commons</module>
+        <module>microservice-eureka-single</module>
+        <module>microservice-eureka-replica</module>
+        <module>microservice-provider-register-multiple</module>
+        <module>microservice-consumer-register-multiple</module>
+        <module>microservice-eureka-self-protect</module>
+        <module>microservice-provider-with-zookeeper</module>
+        <module>microservice-consumer-with-zookeeper</module>
     </modules>
 
 

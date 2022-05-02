@@ -2,7 +2,7 @@ server:
   port: 80
 spring:
   application:
-    name: microservice-consumer-order
+    name: microservice-consumer-register-multiple
 
 eureka:
   client:
@@ -10,4 +10,8 @@ eureka:
     #是否存EurekaServer同步已有的注册信息，单节点无所谓，集群情况下必须设置为true才能配合ribbon进行负载均衡
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    #显示ip地址
+    prefer-ip-address: true

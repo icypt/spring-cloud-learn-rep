@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class MicroserviceConsumerOrder {
+public class MicroserviceConsumerRegisterMultiple {
     public static void main(String[] args) {
-        SpringApplication.run(MicroserviceConsumerOrder.class, args);
+        SpringApplication.run(MicroserviceConsumerRegisterMultiple.class, args);
     }
 }

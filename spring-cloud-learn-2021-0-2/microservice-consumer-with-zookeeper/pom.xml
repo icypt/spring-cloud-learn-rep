@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-provider-payment</artifactId>
+    <artifactId>microservice-consumer-with-zookeeper</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>com.icypt.learn</groupId>
             <artifactId>microservice-api-commons</artifactId>
@@ -44,24 +43,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- mybatis依赖 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis.version}</version>
-        </dependency>
-
-        <!-- mysql驱动包 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>

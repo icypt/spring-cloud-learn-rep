@@ -1,9 +1,9 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
-    name: microservice-provider-payment
+    name: microservice-provider-register-multiple
   datasource:
     url: jdbc:mysql://localhost:3306/cloud_learn?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
@@ -13,7 +13,7 @@ spring:
 
 
 mybatis:
-  mapper-locations: classpath:/mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
 
 
 eureka:
@@ -22,4 +22,4 @@ eureka:
     #是否存EurekaServer同步已有的注册信息，单节点无所谓，集群情况下必须设置为true才能配合ribbon进行负载均衡
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka

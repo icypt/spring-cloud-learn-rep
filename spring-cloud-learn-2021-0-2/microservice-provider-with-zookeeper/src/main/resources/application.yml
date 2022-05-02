@@ -1,25 +1,18 @@
 server:
   port: 8001
-
 spring:
   application:
-    name: microservice-provider-payment
+    name: microservice-provider-with-zookeeper
   datasource:
     url: jdbc:mysql://localhost:3306/cloud_learn?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123580
     type: com.mysql.cj.jdbc.MysqlDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    zookeeper:
+      connect-string: 192.168.31.20:2181
 
 
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
-
-
-eureka:
-  client:
-    register-with-eureka: true
-    #是否存EurekaServer同步已有的注册信息，单节点无所谓，集群情况下必须设置为true才能配合ribbon进行负载均衡
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:7001/eureka
