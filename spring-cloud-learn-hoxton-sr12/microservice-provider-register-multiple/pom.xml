@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-cloud-learn-2021-0-2</artifactId>
+        <artifactId>spring-cloud-learn-hoxton-sr12</artifactId>
         <groupId>com.icypt.learn</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-provider-with-consul</artifactId>
+    <artifactId>microservice-provider-register-multiple</artifactId>
 
     <dependencies>
 
@@ -56,10 +56,10 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--consul-discovery-->
+        <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
     </dependencies>
