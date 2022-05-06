@@ -73,6 +73,7 @@
         <module>microservice-consumer-open-feign</module>
         <module>microservice-provider-with-hystrix</module>
         <module>microservice-consumer-fegin-hystrix</module>
+        <module>microservice-hystrix-dashboard</module>
     </modules>
 
 

@@ -1,0 +1,8 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: microservice-hystrix-dashboard
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost
