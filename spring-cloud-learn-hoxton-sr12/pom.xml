@@ -71,6 +71,8 @@
         <module>microservice-consumer-with-consul</module>
         <module>microservice-provider-with-consul</module>
         <module>microservice-consumer-open-feign</module>
+        <module>microservice-provider-with-hystrix</module>
+        <module>microservice-consumer-fegin-hystrix</module>
     </modules>
 
 
