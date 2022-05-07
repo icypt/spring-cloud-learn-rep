@@ -16,8 +16,9 @@ spring:
       server:
         git:
           #仓库地址
-          uri: https://github.com/icypt/config-rep.git
+          uri: https://gitee.com/ICYPT/config-repo.git
           #匹配目录
-          search-paths: config-rep
+          search-paths:
+            - config-rep
       #读取分支
       label: master
