@@ -76,6 +76,7 @@
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-gateway</module>
         <module>microservice-config-server</module>
+        <module>microservice-config-client</module>
     </modules>
 
 
