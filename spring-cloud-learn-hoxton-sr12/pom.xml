@@ -74,6 +74,7 @@
         <module>microservice-provider-with-hystrix</module>
         <module>microservice-consumer-fegin-hystrix</module>
         <module>microservice-hystrix-dashboard</module>
+        <module>microservice-gateway</module>
     </modules>
 
 
