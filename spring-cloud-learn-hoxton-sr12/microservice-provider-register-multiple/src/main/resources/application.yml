@@ -10,6 +10,12 @@ spring:
     password: 123580
     type: com.mysql.cj.jdbc.MysqlDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      #采样率值介于0到1之间，1，表示全部采集，建议使用0.5
+      probability: 1
 
 
 mybatis:

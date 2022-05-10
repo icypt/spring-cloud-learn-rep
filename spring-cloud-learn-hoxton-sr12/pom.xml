@@ -77,6 +77,8 @@
         <module>microservice-gateway</module>
         <module>microservice-config-server</module>
         <module>microservice-config-client</module>
+        <module>microservice-stream-provider</module>
+        <module>microservice-stream-consumer</module>
     </modules>
 
 
