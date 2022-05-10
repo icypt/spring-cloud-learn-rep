@@ -1,0 +1,19 @@
+server:
+  port: 8843
+spring:
+  application:
+    name: microservice-nacos-config
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        #文件地址
+        server-addr: localhost:8848
+        #文件扩展名
+        file-extension: yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -81,6 +81,7 @@
         <module>microservice-stream-consumer</module>
         <module>microservice-nacos-provider</module>
         <module>microservice-nacos-consumer</module>
+        <module>microservice-nacos-config</module>
     </modules>
 
 
