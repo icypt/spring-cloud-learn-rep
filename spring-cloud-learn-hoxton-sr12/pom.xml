@@ -83,6 +83,7 @@
         <module>microservice-nacos-consumer</module>
         <module>microservice-nacos-config</module>
         <module>microservice-nacos-with-sentinel</module>
+        <module>microservice-seata-account</module>
     </modules>
 
 

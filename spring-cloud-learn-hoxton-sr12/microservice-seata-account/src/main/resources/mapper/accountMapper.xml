@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icypt.learn.mapper.AccountMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.icypt.learn.entity.Account">
+        <id column="account_id" property="accountId" jdbcType="BIGINT"/>
+        <result column="account_name" property="accountName" jdbcType="VARCHAR"/>
+        <result column="account_balance" property="accountBalance" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        account_id, account_name, account_balance
+    </sql>
+    <update id="updateAccountBalance" parameterType="Map">
+        update tb_account t set t.account_balance=#{account.accountBalance} where t.account_id = #{account.accountId}
+    </update>
+
+</mapper>
