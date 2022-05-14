@@ -82,6 +82,7 @@
         <module>microservice-nacos-provider</module>
         <module>microservice-nacos-consumer</module>
         <module>microservice-nacos-config</module>
+        <module>microservice-nacos-with-sentinel</module>
     </modules>
 
 
