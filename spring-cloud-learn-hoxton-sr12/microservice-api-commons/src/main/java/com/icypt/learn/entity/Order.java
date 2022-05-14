@@ -15,5 +15,6 @@ public class Order implements Serializable {
     private String orderNo;
     private String orderAmt;
     private Date orderCreateTime;
+    private String orderStatus;
     private Long accountId;
 }

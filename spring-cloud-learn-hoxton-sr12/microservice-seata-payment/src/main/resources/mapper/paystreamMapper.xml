@@ -6,19 +6,19 @@
         <id column="pay_stream_id" property="payStreamId" jdbcType="BIGINT"/>
         <result column="pay_stream_no" property="payStreamNo" jdbcType="VARCHAR"/>
         <result column="pay_stream_amt" property="payStreamAmt" jdbcType="VARCHAR"/>
+        <result column="pay_stream_status" property="payStreamStatus" jdbcType="VARCHAR"/>
         <result column="order_id" property="orderId" jdbcType="BIGINT"/>
-        <result column="account_id" property="accountId" jdbcType="BIGINT"/>
         <result column="pay_stream_create_time" property="payStreamCreateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        pay_stream_id,pay_stream_no,pay_stream_amt,order_id,account_id,pay_stream_create_time
+        pay_stream_id,pay_stream_no,pay_stream_amt,pay_stream_status,order_id,pay_stream_create_time
     </sql>
 
     <insert id="createPayStream" parameterType="Map">
-        insert into tb_pay_stream(pay_stream_id,pay_stream_no,pay_stream_amt,order_id,account_id,pay_stream_create_time)
-        values (#{payStream.payStreamId},#{payStream.payStreamNo},#{payStream.payStreamAmt},#{payStream.orderId},#{payStream.accountId},#{payStream.payStreamCreateTime})
+        insert into tb_pay_stream(pay_stream_id,pay_stream_no,pay_stream_amt, pay_stream_status, order_id,pay_stream_create_time)
+        values (#{payStream.payStreamId},#{payStream.payStreamNo},#{payStream.payStreamAmt},#{payStream.payStreamStatus},#{payStream.orderId},#{payStream.payStreamCreateTime})
     </insert>
 
 </mapper>

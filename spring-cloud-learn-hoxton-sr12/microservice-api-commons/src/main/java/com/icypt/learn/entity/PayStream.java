@@ -15,7 +15,7 @@ public class PayStream implements Serializable {
     private String payStreamNo;
     private String payStreamAmt;
     private Long orderId;
-    private Long accountId;
+    private String payStreamStatus;
     private Date payStreamCreateTime;
 
 }

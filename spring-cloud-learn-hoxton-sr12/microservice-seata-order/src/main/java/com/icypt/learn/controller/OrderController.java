@@ -22,7 +22,6 @@ public class OrderController {
 
     @PostMapping("/create")
     public ResultVo create(Order order) {
-        order.setOrderCreateTime(new Date());
         boolean flag = orderService.createOrder(order);
         if(flag) {
             return new ResultVo("200", "订单创建成功");

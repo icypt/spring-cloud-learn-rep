@@ -6,6 +6,7 @@
         <id column="order_id" property="orderId" jdbcType="BIGINT"/>
         <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
         <result column="order_amt" property="orderAmt" jdbcType="VARCHAR"/>
+        <result column="order_status" property="orderStatus" jdbcType="VARCHAR"/>
         <result column="order_create_time" property="orderCreateTime" jdbcType="TIMESTAMP"/>
         <result column="account_id" property="accountId" jdbcType="VARCHAR"/>
     </resultMap>
@@ -16,9 +17,9 @@
     </sql>
 
     <insert id="createOrder" parameterType="Map">
-        insert into tb_order(order_id, order_no, order_amt, order_create_time, account_id)
+        insert into tb_order(order_id, order_no, order_amt, order_status, order_create_time, account_id)
         values (#{order.orderId, jdbcType=BIGINT},#{order.orderNo, jdbcType=VARCHAR},
-        #{order.orderAmt, jdbcType=VARCHAR},#{order.orderCreateTime, jdbcType=TIMESTAMP},#{order.accountId, jdbcType=BIGINT})
+        #{order.orderAmt, jdbcType=VARCHAR},#{order.orderStatus, jdbcType=VARCHAR},#{order.orderCreateTime, jdbcType=TIMESTAMP},#{order.accountId, jdbcType=BIGINT})
     </insert>
 
 </mapper>
