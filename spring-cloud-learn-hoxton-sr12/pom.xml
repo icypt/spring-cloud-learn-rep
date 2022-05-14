@@ -85,6 +85,7 @@
         <module>microservice-nacos-with-sentinel</module>
         <module>microservice-seata-account</module>
         <module>microservice-seata-order</module>
+        <module>microservice-seata-payment</module>
     </modules>
 
 

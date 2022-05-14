@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icypt.learn.mapper.PayStreamMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.icypt.learn.entity.PayStream">
+        <id column="pay_stream_id" property="payStreamId" jdbcType="BIGINT"/>
+        <result column="pay_stream_no" property="payStreamNo" jdbcType="VARCHAR"/>
+        <result column="pay_stream_amt" property="payStreamAmt" jdbcType="VARCHAR"/>
+        <result column="order_id" property="orderId" jdbcType="BIGINT"/>
+        <result column="account_id" property="accountId" jdbcType="BIGINT"/>
+        <result column="pay_stream_create_time" property="payStreamCreateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        pay_stream_id,pay_stream_no,pay_stream_amt,order_id,account_id,pay_stream_create_time
+    </sql>
+
+    <insert id="createPayStream" parameterType="Map">
+        insert into tb_pay_stream(pay_stream_id,pay_stream_no,pay_stream_amt,order_id,account_id,pay_stream_create_time)
+        values (#{payStream.payStreamId},#{payStream.payStreamNo},#{payStream.payStreamAmt},#{payStream.orderId},#{payStream.accountId},#{payStream.payStreamCreateTime})
+    </insert>
+
+</mapper>
