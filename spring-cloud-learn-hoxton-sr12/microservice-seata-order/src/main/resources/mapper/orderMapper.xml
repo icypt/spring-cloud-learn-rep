@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icypt.learn.mapper.OrderMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.icypt.learn.entity.Order">
+        <id column="order_id" property="orderId" jdbcType="BIGINT"/>
+        <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
+        <result column="order_amt" property="orderAmt" jdbcType="VARCHAR"/>
+        <result column="order_create_time" property="orderCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="account_id" property="accountId" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        order_id, order_no, order_amt, order_create_time, account_id
+    </sql>
+
+    <insert id="createOrder" parameterType="Map">
+        insert into tb_order(order_id, order_no, order_amt, order_create_time, account_id)
+        values (#{order.orderId, jdbcType=BIGINT},#{order.orderNo, jdbcType=VARCHAR},
+        #{order.orderAmt, jdbcType=VARCHAR},#{order.orderCreateTime, jdbcType=TIMESTAMP},#{order.accountId, jdbcType=BIGINT})
+    </insert>
+
+</mapper>

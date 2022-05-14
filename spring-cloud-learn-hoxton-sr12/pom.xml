@@ -84,6 +84,7 @@
         <module>microservice-nacos-config</module>
         <module>microservice-nacos-with-sentinel</module>
         <module>microservice-seata-account</module>
+        <module>microservice-seata-order</module>
     </modules>
 
 
