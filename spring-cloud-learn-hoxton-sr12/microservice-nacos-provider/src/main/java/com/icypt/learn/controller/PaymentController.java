@@ -17,4 +17,16 @@ public class PaymentController {
     public  String getInfo(@PathVariable String id) {
         return "nacos provider port:" + serverPort + ",id=" + id;
     }
+
+    @GetMapping("/testException/{id}")
+    public  String testException(@PathVariable String id) {
+        if(Integer.parseInt(id) == 5) {
+            throw new RuntimeException("系统错误");
+        }
+
+        if(Integer.parseInt(id) == 10) {
+           throw new IllegalArgumentException("参数异常");
+        }
+        return "正常返回" + "\t" +",id=" + id;
+    }
 }

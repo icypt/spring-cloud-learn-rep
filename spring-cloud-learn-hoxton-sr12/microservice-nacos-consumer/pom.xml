@@ -12,11 +12,6 @@
     <artifactId>microservice-nacos-consumer</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.icypt.learn</groupId>
-            <artifactId>microservice-api-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
 
         <!-- web依赖 -->
@@ -35,6 +30,18 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!--nacos-sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
+        <!--openfeign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
     </dependencies>
