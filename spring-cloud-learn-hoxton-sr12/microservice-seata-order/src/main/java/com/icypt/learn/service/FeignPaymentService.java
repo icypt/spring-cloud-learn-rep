@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(value = "microservice-seata-payment")
 public interface FeignPaymentService {
 
-    @PostMapping("/create")
+    @PostMapping("/payStream/create")
     public ResultVo create(PayStream payStream);
+
+    @PostMapping("/payStream/update")
+    public ResultVo update(PayStream payStream);
+
+    @PostMapping("/payStream/pay")
+    public ResultVo pay(PayStream payStream);
 }

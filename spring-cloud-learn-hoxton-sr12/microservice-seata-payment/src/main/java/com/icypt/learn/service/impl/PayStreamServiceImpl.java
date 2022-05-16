@@ -15,12 +15,13 @@ public class PayStreamServiceImpl implements PayStreamService {
 
     @Override
     public boolean createPayStream(PayStream payStream) {
-        try {
-            payStreamMapper.createPayStream(payStream);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+        payStreamMapper.createPayStream(payStream);
+        return true;
+    }
+
+    @Override
+    public boolean updatePayStream(PayStream payStream) {
+        payStreamMapper.updatePayStream(payStream);
+        return true;
     }
 }

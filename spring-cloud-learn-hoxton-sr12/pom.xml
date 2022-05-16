@@ -18,6 +18,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <mybatis.version>2.1.1</mybatis.version>
         <seata.version>1.4.2</seata.version>
+        <mysql.connector.version>8.0.22</mysql.connector.version>
     </properties>
 
 

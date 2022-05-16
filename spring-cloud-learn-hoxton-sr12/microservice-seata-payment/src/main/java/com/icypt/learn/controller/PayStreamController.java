@@ -5,6 +5,7 @@ import com.icypt.learn.entity.Order;
 import com.icypt.learn.entity.PayStream;
 import com.icypt.learn.service.PayStreamService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,13 +20,31 @@ public class PayStreamController {
     private PayStreamService payStreamService;
 
     @PostMapping("/create")
-    public ResultVo create(PayStream payStream) {
+    public ResultVo create(@RequestBody PayStream payStream) {
         payStream.setPayStreamCreateTime(new Date());
         boolean flag = payStreamService.createPayStream(payStream);
         if(flag) {
-            return new ResultVo("200", "支付成功");
+            return new ResultVo("200", "流水创建成功");
         } else {
-            return new ResultVo("500", "支付失败");
+            return new ResultVo("500", "流水创建失败");
         }
+    }
+
+    @PostMapping("/update")
+    public ResultVo update(@RequestBody PayStream payStream) {
+        boolean flag = payStreamService.updatePayStream(payStream);
+        if(flag) {
+            return new ResultVo("200", "流水更新成功");
+        } else {
+            return new ResultVo("500", "流水更新失败");
+        }
+    }
+
+    @PostMapping("/pay")
+    public ResultVo pay(@RequestBody PayStream payStream) {
+        if("105".equals(payStream.getPayStreamAmt())) {
+            throw new RuntimeException("系统运行异常");
+        }
+        return new ResultVo("200", "支付成功");
     }
 }

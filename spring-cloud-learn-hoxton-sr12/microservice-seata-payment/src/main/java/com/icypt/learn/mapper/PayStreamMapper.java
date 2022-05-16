@@ -7,4 +7,5 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface PayStreamMapper {
     public void createPayStream(@Param("payStream") PayStream payStream);
+    public void updatePayStream(@Param("payStream") PayStream payStream);
 }

@@ -15,12 +15,12 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public boolean updateAccountBalance(Account account) {
-        try {
-            accountMapper.updateAccountBalance(account);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+        accountMapper.updateAccountBalance(account);
+        return true;
+    }
+
+    @Override
+    public Account getAccount(Long accountId) {
+        return accountMapper.getAccount(accountId);
     }
 }

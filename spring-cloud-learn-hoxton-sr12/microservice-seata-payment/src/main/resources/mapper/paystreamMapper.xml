@@ -21,4 +21,8 @@
         values (#{payStream.payStreamId},#{payStream.payStreamNo},#{payStream.payStreamAmt},#{payStream.payStreamStatus},#{payStream.orderId},#{payStream.payStreamCreateTime})
     </insert>
 
+    <update id="updatePayStream" parameterType="Map">
+        update tb_pay_stream set pay_stream_status=#{payStream.payStreamStatus} where pay_stream_no=#{payStream.payStreamNo}
+    </update>
+
 </mapper>

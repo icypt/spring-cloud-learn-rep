@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface AccountMapper {
     public void updateAccountBalance(@Param("account") Account account);
+
+    public Account getAccount(@Param("accountId") Long accountId);
 }

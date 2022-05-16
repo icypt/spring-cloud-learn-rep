@@ -4,7 +4,7 @@ spring:
   application:
     name: microservice-seata-payment
   datasource:
-    url: jdbc:mysql://localhost:3306/cloud_learn?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/cloud_payment?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123580
     type: com.mysql.cj.jdbc.MysqlDataSource
@@ -14,6 +14,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
 
 mybatis:
   mapper-locations: classpath:/mapper/*.xml

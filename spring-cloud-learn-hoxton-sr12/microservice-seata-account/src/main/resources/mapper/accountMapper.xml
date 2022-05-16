@@ -16,4 +16,8 @@
         update tb_account t set t.account_balance=#{account.accountBalance} where t.account_id = #{account.accountId}
     </update>
 
+
+    <select id="getAccount" parameterType="Map" resultMap="BaseResultMap">
+        select * from tb_account where account_id = #{accountId}
+    </select>
 </mapper>
